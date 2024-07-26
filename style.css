@@ -1,0 +1,13 @@
+/* regole e proprietà di stile */
+
+.box{
+    width: 100%;
+}
+
+body{
+    background-color: dodgerblue;
+}
+
+.text-color{
+    color: white;
+}
