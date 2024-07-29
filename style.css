@@ -11,3 +11,7 @@ body{
 .text-color{
     color: white;
 }
+
+li strong{
+    cursor: pointer;
+}

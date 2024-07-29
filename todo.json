@@ -1,0 +1,28 @@
+[ 
+    
+    {
+        "task": "Fare la spesa",
+        "done": false
+    },
+    {
+        "task": "Andare in palestra",
+        "done": true
+    },
+    {
+        "task": "Studiare per l'esame",
+        "done": false
+    },
+    {
+        "task": "Chiamare il dottore",
+        "done": true
+    },
+    {
+        "task": "Pulire la casa",
+        "done": false
+    },
+    {
+        "task": "Leggere un libro",
+        "done": false
+    }
+
+]
