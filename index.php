@@ -29,30 +29,30 @@
             <div class="row justify-content-center p-5">
 
                 <div class="col-6">
-                    <h1 class="text-center text-color">To do list</h1>
+                    <h1 class="text-center text-color">{{ title }}</h1>
 
                     <div class="card p-3">
 
                         <!-- lista degli items -->
                         <ul class="list-group">
 
-                            <li class="list-group-item d-flex justify-content-between align-items-center" v-for="(item, index) in list">
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" v-for="(item, index) in list" :key="`list${index}`">
                                 <strong>
                                     {{ item.task }}
                                 </strong>
 
                                 <!-- pulsante per cancellare l'oggetto della lista -->
                                 <div class="btn btn-danger">
-                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-solid fa-trash" @click="removeObj(index)"></i>
                                 </div>
                             </li>
 
                         </ul>
 
                         <!-- form per inviare il nuovo task -->
-                        <form action="index.php">
+                        <form @submit.prevent="addObj">
                             <div class="mt-3 btn-group box">
-                                <input type="text" class="form-control" id="input-task" name="input-task" placeholder="Inserisci un nuovo task">
+                                <input v-model="todoItem.task" type="text" class="form-control" placeholder="Inserisci un nuovo task">
 
                                 <button type="submit" class="btn btn-primary">Invia</button>
 
