@@ -27,6 +27,13 @@ if (isset($_POST['indexDelete'])) {
     file_put_contents('todo.json', json_encode($list));
 }
 
+// se esiste la chiave 'taskDone', cambiare il valore della proprietà done
+if(isset($_POST['taskDone'])) {
+    $index = $_POST['taskDone'];
+    $list[$index]['done'] = !$list[$index]['done'];
+    file_put_contents('todo.json', json_encode($list));
+}
+
 // Modificare il file in modo che venga interpretato come JSON
 header("Content-Type: application/json");
 

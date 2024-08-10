@@ -15,3 +15,8 @@ body{
 li strong{
     cursor: pointer;
 }
+
+/* regole per rendere il testo barrato */
+.crossed{
+    text-decoration: line-through;
+}

@@ -57,6 +57,20 @@ createApp({
             
             
             
+        },
+        //cambiare il testo in barrato se la proprietà "done" corrisponde a "true"
+        changeObj(index){
+            console.log(index)
+
+            const data = new URLSearchParams();
+            data.append('taskDone', index);
+
+            axios.post(this.apiURL, data, {
+                headers: {'Content-Type' : 'application/x-www-form-urlencoded'}
+            })
+            .then(response => {
+                this.list = response.data;
+            })
         }
         
         

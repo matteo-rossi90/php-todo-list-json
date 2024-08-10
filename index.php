@@ -37,7 +37,9 @@
                         <ul class="list-group">
 
                             <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" v-for="(item, index) in list" :key="`list${index}`">
-                                <strong>
+                                
+                                <!-- se l'elemento ha chiave-valore "done:true", al click il testo diventa barrato -->
+                                <strong :class="{crossed : item.done}" @click="changeObj(index)"> 
                                     {{ item.task }}
                                 </strong>
 
