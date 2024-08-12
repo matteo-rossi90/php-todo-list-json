@@ -44,7 +44,7 @@
                                 </strong>
 
                                 <!-- pulsante per cancellare l'oggetto della lista -->
-                                <div class="btn btn-danger">
+                                <div class="btn btn-danger" v-if="item.done">
                                     <i class="fa-solid fa-trash" @click="removeObj(index)"></i>
                                 </div>
                             </li>
