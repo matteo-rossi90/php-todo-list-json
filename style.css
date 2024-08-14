@@ -1,6 +1,7 @@
 /* regole e proprietà di stile */
 
-.box{
+.box,
+button[type="submit"]{
     width: 100%;
 }
 
@@ -14,6 +15,16 @@ body{
 
 li strong{
     cursor: pointer;
+}
+
+.group-buttons{
+    display: flex;
+    gap: 8px;
+}
+
+.callout{
+    background-color: rgb(211, 249, 211);
+    border-left: rgb(28, 178, 28) 4px solid;
 }
 
 /* regole per rendere il testo barrato */

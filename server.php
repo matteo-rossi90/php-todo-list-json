@@ -10,7 +10,8 @@ $list = json_decode($string, true);
 if (isset($_POST['task'])) {
     $todoItem = [
         'task' => $_POST['task'],
-        'done' => false
+        'done' => false,
+        'text' => $_POST['text']
     ];
 
     //aggiungere l'elemento alla lista
